@@ -1,17 +1,22 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <mat-toolbar color="primary" class="mat-elevation-z6">
-  <mat-toolbar-row>
-    <button (click)="sidenav.toggle()" mat-icon-button>
-      <mat-icon>menu</mat-icon>
-    </button>
-    <div>Sel Project</div>
-  </mat-toolbar-row>
+    <mat-toolbar-row>
+        <button (click)="sidenav.toggle()" mat-icon-button>
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div>Sel Project</div>
+    </mat-toolbar-row>
 </mat-toolbar>
-<mat-sidenav-container>
-  <mat-sidenav color="primary" #sidenav mode="side" [(opened)]="opened">
-    Sidenav content le menu
-  </mat-sidenav>
-  <mat-sidenav-content fxFlex="100" fxLayout="column">
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
+<mat-sidenav-container fxLayout="row" class="example-container">
+    <mat-sidenav fxFlex="25" fxLayout="column" color="primary" #sidenav mode="side">
+        <button routerLink="/home" mat-icon-button>
+            <mat-icon>menu</mat-icon> Home
+        </button>
+        <button routerLink="/concept" mat-icon-button>
+            <mat-icon>menu</mat-icon> Concept
+        </button>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlex="75" fxLayout="column">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
 </mat-sidenav-container>
