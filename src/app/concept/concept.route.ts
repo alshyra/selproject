@@ -8,4 +8,4 @@ const conceptRoutes: Route = {
 
 const routes: Routes = [conceptRoutes];
 
-export { routes as offerRoutes };
+export { routes as conceptRoutes };

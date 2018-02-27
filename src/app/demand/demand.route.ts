@@ -14,4 +14,4 @@ const demandListRoutes: Route = {
 
 const routes: Routes = [demandDetailRoutes, demandListRoutes];
 
-export { routes as offerRoutes };
+export { routes as demandRoutes };
