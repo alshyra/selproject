@@ -9,20 +9,28 @@ import { MatButtonModule, MatSidenavModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeModule } from './home/home.module';
+import { DemandModule } from './demand/demand.module';
+import { ProfileModule } from './profile/profile.module';
+import { OfferModule } from './offer/offer.module';
+import { ConceptModule } from './concept/concept.module';
 @NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatIconModule,
-    AppRoutingModule,
-    HomeModule,
-    FlexLayoutModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatToolbarModule,
+        MatIconModule,
+        AppRoutingModule,
+        HomeModule,
+        DemandModule,
+        ProfileModule,
+        OfferModule,
+        ConceptModule,
+        FlexLayoutModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}
