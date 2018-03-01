@@ -1,3 +1,21 @@
-<p>
-  my-profile works!
-</p>
+<div>
+    <h1>{{ user.name + ' ' + user.surname }}</h1>
+    <div>
+        <mat-form-field fxFlex>
+            <label for="username"> Nom</label>
+            <input matInput name="username" [(ngModel)]="user.name" type="text">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field fxFlex>
+            <label for="usersurname"> Prenom</label>
+            <input matInput name="usersurname" [(ngModel)]="user.surname" type="text">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field fxFlex>
+            <label for="useremail"> Email</label>
+            <input matInput name="useremail" [(ngModel)]="user.email" type="text">
+        </mat-form-field>
+    </div>
+</div>

@@ -1,40 +1,49 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconModule } from '@angular/material/icon';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatListModule } from '@angular/material/list';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule, MatSidenavModule } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatListModule,
+    MatToolbarModule
+} from '@angular/material';
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './/app-routing.module';
-import { HomeModule } from './home/home.module';
-import { DemandModule } from './demand/demand.module';
-import { ProfileModule } from './profile/profile.module';
-import { OfferModule } from './offer/offer.module';
+import { AppRoutingModule } from './app-routing.module';
 import { ConceptModule } from './concept/concept.module';
+import { DemandModule } from './demand/demand.module';
+import { HomeModule } from './home/home.module';
+import { OfferModule } from './offer/offer.module';
+import { ProfileModule } from './profile/profile.module';
+
 @NgModule({
     declarations: [AppComponent],
     imports: [
-        BrowserModule,
+        AppRoutingModule,
         BrowserAnimationsModule,
+        BrowserModule,
+        ConceptModule,
+        DemandModule,
+        FlexLayoutModule,
+        FormsModule,
+        HomeModule,
+        LayoutModule,
         MatButtonModule,
+        MatFormFieldModule,
+        MatIconModule,
+        MatInputModule,
+        MatListModule,
         MatSidenavModule,
         MatToolbarModule,
-        MatIconModule,
-        MatListModule,
-        AppRoutingModule,
-        HomeModule,
-        DemandModule,
-        ProfileModule,
         OfferModule,
-        ConceptModule,
-        FlexLayoutModule,
-        LayoutModule
+        ProfileModule
     ],
     providers: [],
     bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
