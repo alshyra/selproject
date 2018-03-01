@@ -1,22 +1,22 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar color="primary" class="mat-elevation-z6">
-    <mat-toolbar-row>
-        <button (click)="sidenav.toggle()" mat-icon-button>
-            <mat-icon>menu</mat-icon>
-        </button>
-        <div>Sel Project</div>
-    </mat-toolbar-row>
-</mat-toolbar>
-<mat-sidenav-container fxLayout="row" class="example-container">
-    <mat-sidenav fxFlex="25" fxLayout="column" color="primary" #sidenav mode="side">
-        <button routerLink="/home" mat-icon-button>
-            <mat-icon>menu</mat-icon> Home
-        </button>
-        <button routerLink="/concept" mat-icon-button>
-            <mat-icon>menu</mat-icon> Concept
-        </button>
-    </mat-sidenav>
-    <mat-sidenav-content fxFlex="75" fxLayout="column">
-        <router-outlet></router-outlet>
-    </mat-sidenav-content>
-</mat-sidenav-container>
+<div fxFlex fxLayout="column">
+    <mat-toolbar color="primary" class="mat-elevation-z6">
+        <mat-toolbar-row>
+            <button fxShow fxHide.gt-xs (click)="sidenav.toggle()" mat-icon-button>
+                <mat-icon>menu</mat-icon>
+            </button>
+            <a mat-button routerLink="/home">Sel Project</a>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-sidenav-container class="example-container-sidenav">
+        <mat-sidenav fxLayout="column" color="primary" #sidenav [opened]="mobileQuery.matches ? 'false' : 'true'" [mode]="mobileQuery.matches ? 'over' : 'side'">
+            <mat-nav-list>
+                <a mat-list-item routerLink="/my-profile">My profile</a>
+                <a mat-list-item routerLink="/demands">Demands</a>
+                <a mat-list-item routerLink="/offers">Offers</a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content fxFlex>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

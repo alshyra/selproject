@@ -6,13 +6,15 @@ import { homeRoutes } from './home/home.route';
 import { conceptRoutes } from './concept/concept.route';
 import { offerRoutes } from './offer/offer.route';
 import { demandRoutes } from './demand/demand.route';
+import { profileRoutes } from './profile/profile.route';
 
 const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     ...homeRoutes,
     ...conceptRoutes,
     ...offerRoutes,
-    ...demandRoutes
+    ...demandRoutes,
+    ...profileRoutes
 ];
 
 @NgModule({

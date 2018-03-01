@@ -1,0 +1,23 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+}
+.example-container-sidenav {
+    mat-sidenav {
+        width: 250px;
+    }
+}
+
+mat-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
+}
+mat-sidenav-content {
+    padding-top: 64px;
+    height: 100vh;
+}
+
+mat-sidenav {
+    padding-top: 64px;
+}
