@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ServiceWorkerModule } from '@angular/service-worker';
 import { LayoutModule } from '@angular/cdk/layout';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -20,10 +21,12 @@ import { DemandModule } from './demand/demand.module';
 import { HomeModule } from './home/home.module';
 import { OfferModule } from './offer/offer.module';
 import { ProfileModule } from './profile/profile.module';
+import { environment } from '../environments/environment';
 
 @NgModule({
     declarations: [AppComponent],
     imports: [
+        environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : [],
         MatButtonModule,
         MatFormFieldModule,
         MatIconModule,

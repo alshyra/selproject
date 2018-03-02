@@ -9,12 +9,12 @@ import { demandRoutes } from './demand/demand.route';
 import { profileRoutes } from './profile/profile.route';
 
 const routes: Routes = [
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
     ...homeRoutes,
     ...conceptRoutes,
     ...offerRoutes,
     ...demandRoutes,
-    ...profileRoutes
+    ...profileRoutes,
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({
