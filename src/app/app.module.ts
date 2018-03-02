@@ -24,15 +24,6 @@ import { ProfileModule } from './profile/profile.module';
 @NgModule({
     declarations: [AppComponent],
     imports: [
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        BrowserModule,
-        ConceptModule,
-        DemandModule,
-        FlexLayoutModule,
-        FormsModule,
-        HomeModule,
-        LayoutModule,
         MatButtonModule,
         MatFormFieldModule,
         MatIconModule,
@@ -40,10 +31,19 @@ import { ProfileModule } from './profile/profile.module';
         MatListModule,
         MatSidenavModule,
         MatToolbarModule,
+        BrowserAnimationsModule,
+        BrowserModule,
+        FlexLayoutModule,
+        FormsModule,
+        LayoutModule,
+        AppRoutingModule,
+        ConceptModule,
+        DemandModule,
+        HomeModule,
         OfferModule,
         ProfileModule
     ],
-    providers: [],
+    exports: [MatFormFieldModule, MatInputModule],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
