@@ -1,36 +1,42 @@
 <!doctype html>
 <Company Namehtml lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <title>SelProject</title>
-    <base href="/">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <head>
+        <meta charset="utf-8">
+        <title>SelProject</title>
+        <base href="/">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#f48c5b">
-</head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#f48c5b">
+    </head>
 
-<body>
-    <app-root>
-        <style>
-            .splash {
-                margin-top: 12%;
-                margin-left: 45%;
-            }
-        </style>
-        <div class="splash" id="content">
-            <img src="/assets/sellogo.png" width="256px" alt="Sel logo">
-        </div>
-    </app-root>
-    <noscript>
-        <p>
-            Sorry, JavaScript must be enabled to use this app
-        </p>
-    </noscript>
-</body>
+    <body>
+        <app-root>
+            <style>
+                .splash {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                }
 
-</html>
+                .splash img {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            </style>
+            <div class="splash" id="content">
+                <img src="/assets/sellogo.png" width="256px" alt="Sel logo">
+            </div>
+        </app-root>
+        <noscript>
+            <p>
+                Sorry, JavaScript must be enabled to use this app
+            </p>
+        </noscript>
+    </body>
+
+    </html>
